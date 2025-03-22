@@ -1,0 +1,6 @@
+
+.dotbuild/
+.surfer/
+engine/
+firefox-*/
+node_modules/
