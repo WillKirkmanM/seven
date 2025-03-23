@@ -1,0 +1,36 @@
+diff --git a/browser/app/profile/firefox.js b/browser/app/profile/firefox.js
+index b0ea78450d9cae73fb1960ac41615ce85fa757e3..163995dc6e721a47cd8177846706abac61e65feb 100644
+--- a/browser/app/profile/firefox.js
++++ b/browser/app/profile/firefox.js
+@@ -2589,16 +2589,13 @@ pref("browser.migrate.interactions.passwords", false);
+ 
+ pref("browser.migrate.preferences-entrypoint.enabled", true);
+ 
+-pref("extensions.pocket.api", "api.getpocket.com");
+-pref("extensions.pocket.bffApi", "firefox-api-proxy.cdn.mozilla.net");
+-pref("extensions.pocket.bffRecentSaves", true);
+-pref("extensions.pocket.enabled", true);
+-pref("extensions.pocket.oAuthConsumerKey", "40249-e88c401e1b1f2242d9e441c4");
+-pref("extensions.pocket.oAuthConsumerKeyBff", "94110-6d5ff7a89d72c869766af0e0");
+-pref("extensions.pocket.site", "getpocket.com");
++user_pref('extensions.pocket.enabled', false)
++user_pref('extensions.pocket.api', ' ')
++user_pref('extensions.pocket.oAuthConsumerKey', ' ')
++user_pref('extensions.pocket.site', ' ')
+ 
+ // Enable Pocket button home panel for non link pages.
+-pref("extensions.pocket.showHome", true);
++pref("extensions.pocket.showHome", false);
+ 
+ // Control what version of the logged out doorhanger is displayed
+ // Possibilities are: `control`, `control-one-button`, `variant_a`, `variant_b`, `variant_c`
+@@ -3339,3 +3336,8 @@ pref("toolkit.contentRelevancy.enabled", false);
+ pref("toolkit.contentRelevancy.ingestEnabled", false);
+ // Pref to enable extra logging for the content relevancy feature
+ pref("toolkit.contentRelevancy.log", false);
++
++user_pref(
++  'browser.newtabpage.activity-stream.section.highlights.includePocket',
++  false
++)
+\ No newline at end of file
